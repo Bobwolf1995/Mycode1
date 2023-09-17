@@ -49,10 +49,10 @@ public class Mycode2 {
             }
         }
         
-        // ترتيب المصفوفة تصاعدياً
+        System.out.println("ترتيب المصفوفة");
         Arrays.sort(numbers);
         
-        // البحث عن محتوى في المصفوفة
+        
         System.out.print("البحث عن محتوى في المصفوفة، الرجاء إدخال القيمة المراد البحث عنها: ");
         int searchValue = scanner.nextInt();
         int searchIndex = Arrays.binarySearch(numbers, searchValue);
@@ -63,7 +63,7 @@ public class Mycode2 {
             System.out.println("القيمة " + searchValue + " لم تُجد في المصفوفة.");
         }
         
-        // طباعة محتويات المصفوفة بشكل معكوس
+        
         System.out.println("محتويات المصفوفة بشكل معكوس:");
         for (int i = 19; i >= 0; i--) {
             System.out.print(numbers[i] + " ");
@@ -86,11 +86,11 @@ public class Mycode2 {
             }
         }
         
-        // طباعة محتويات مصفوفة الأعداد الفردية
+       
         System.out.println("الأعداد الفردية في المصفوفة:");
         for (int i = 0; i < oddCount; i++) {
             System.out.print(oddNumbers[i] + " ");
         }
-        System.out.println(); // سطر فارغ
+        System.out.println(); 
     }
 }
