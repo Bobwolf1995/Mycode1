@@ -7,90 +7,157 @@ public class Mycode2 {
     
     
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int[] numbers = new int[20];
+        Scanner input = new Scanner (System.in);
         
-        System.out.println("الرجاء ادخال عشرين عدد صحيح هنا ");
+        int Number[] = new int[20];
         
-        for (int i = 0; i < 20; i++) {
-            System.out.print("Number" + (i + 1) + ":");
-            numbers[i] = scanner.nextInt();
-        }
+        System.out.println("The correct numbers");
         
-        // حساب مجموع الأعداد
-        int sum = 0;
-        for(int i = 0; i < numbers.length; i++){
-            sum = sum =+ numbers[i];
+        for(int i = 1; i < Number.length; i++){
             
+            Number[i] = input.nextInt();
         }
         
-        // حساب متوسط الأعداد
-       double average = (double) sum / 20;
-       
-        // العثور على أكبر وأصغر قيمة في المصفوفة
-        int max = numbers[0];
-        int min = numbers[0];
+      
+        int sum = 0;
         
-        for (int i = 1; i < 20; i++) {
-            if (numbers[i] > max) {
-                max = numbers[i];
-            }
-            if (numbers[i] < min) {
-                min = numbers[i];
-            }
+        for(int i = 0; i < Number.length; i++){
+            
+            
+            System.out.println("Calculate all numbers");
+            sum = sum += Number[i];
+           
         }
+        System.out.println(sum);
         
-        // العثور على ثاني أكبر قيمة في المصفوفة
-        int secondMax = numbers[0];
+        // حساب متوسط الاعداد 
+        double average = (double) sum / 20;
+
+int arr [] = {10 , 40 , -3 , 90};
+int max = arr[0];
+int min = arr[0];
+
+for(int i = 1; i < arr.length; i++){
+    
+    if(arr[i] > max){
+    
+    max = arr[i];
+}
+    if(arr[i] < min){
+        min = arr[i];
+    }
+    
+}
+         System.out.println("Max is = "  + max);
+         System.out.println("Min is = " + min);
+  
+
+
+         for (int x = 0; x < Number.length; ++x){
+             x++;
+             System.out.println(x);
+            
+         }
+          
+             for(int i = 1; i < Number.length; i++){
+                 i++;
+                 System.out.print(i);
+             }
+         
+             
+             int Secondbigernumber = arr[0];
+             
+             for(int i = 0; i < arr.length; i++){
+                 
+                 if(arr[i] < max && arr[i] > Secondbigernumber ){
+                     
+                     Secondbigernumber = arr[i];
+                 }
+             }
+             
+             System.out.println("print the secound max number : " + Secondbigernumber);
+             
+             
+            System.out.println("Arrenge the []");
+           
+            
+             Arrays.sort(arr);
+             Arrays.sort(Number);
+             
+          // ===========================================================  
+             
+int Tar[] = {45 , 70 , 50 , 1 , 96};
+
+int target = 50;
+
+boolean found = false;
+boolean Sfound = false;
+
+for(int i = 0; i < Tar.length; i++){
+    if(Tar[i] == target){
+        found = true;
+        break;
+    }
+    
+}
         
-        for (int i = 1; i < 20; i++) {
-            if (numbers[i] < max && numbers[i] > secondMax) {
-                secondMax = numbers[i];
-            }
-        }
+if(found){
+    System.out.println("The Target is = " + target);
+}
+else{
+    System.out.println("The Target hasn't been found " + target);
+}
+
+
+
+for(int i = 96; i > Tar.length; i--){
+    System.out.println(i);
+}
+
+
+// ملاحظة لم يتم الضرب هنا:( 
+int fac [] = {4,5,2,1,7};
+
+int Factor = 2;
+
+for(int i = 0; i<fac.length; i++){
+    
+    fac[i] = fac[i] * Factor;
+}
+
+      
+int[] originalArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         
-        System.out.println("ترتيب المصفوفة");
-        Arrays.sort(numbers);
-        
-        
-        System.out.print("البحث عن محتوى في المصفوفة، الرجاء إدخال القيمة المراد البحث عنها: ");
-        int searchValue = scanner.nextInt();
-        int searchIndex = Arrays.binarySearch(numbers, searchValue);
-        
-        if (searchIndex >= 0) {
-            System.out.println("تم العثور على القيمة " + searchValue + " في المصفوفة بالفهرس " + searchIndex);
-        } else {
-            System.out.println("القيمة " + searchValue + " لم تُجد في المصفوفة.");
-        }
-        
-        
-        System.out.println("محتويات المصفوفة بشكل معكوس:");
-        for (int i = 19; i >= 0; i--) {
-            System.out.print(numbers[i] + " ");
-        }
-        System.out.println(); // سطر فارغ
-        
-        // مضاعفة قيمة كل محتوى في المصفوفة
-        for (int i = 0; i < 20; i++) {
-            numbers[i] *= 2;
-        }
-        
-        // العثور على الأعداد الفردية وتخزينها في مصفوفة أخرى
-        int[] oddNumbers = new int[20];
+        // حساب عدد الأعداد الفردية لتحديد حجم المصفوفة الجديدة
         int oddCount = 0;
-        
-        for (int i = 0; i < 20; i++) {
-            if (numbers[i] % 2 != 0) {
-                oddNumbers[oddCount] = numbers[i];
+        for (int i = 0; i < originalArray.length; i++) {
+            if (originalArray[i] % 2 != 0) {
                 oddCount++;
             }
         }
+
+        // إنشاء مصفوفة جديدة لتخزين الأعداد الفردية
+        int[] oddNumbers = new int[oddCount];
         
-       
-        System.out.println("الأعداد الفردية في المصفوفة:");
-        for (int i = 0; i < oddCount; i++) {
-            System.out.print(oddNumbers[i] + " ");
+        // متغير لتتبع مؤشر المصفوفة الجديدة
+        int newIndex = 0;
+
+        // استخدام حلقة for لاختيار وتخزين الأعداد الفردية
+        for (int i = 0; i < originalArray.length; i++) {
+            if (originalArray[i] % 2 != 0) {
+                oddNumbers[newIndex] = originalArray[i];
+                        newIndex++;
+            }
         }
-        System.out.println(); 
+
+        // طباعة المصفوفة الجديدة
+        System.out.print("الأعداد الفردية في المصفوفة الأصلية: ");
+        for (int odd : oddNumbers) {
+            System.out.print(odd + " ");
+        }
     }
-}
+       
+
+    }
+
+  
